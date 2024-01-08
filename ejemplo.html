@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .animated-button {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #3498db;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            z-index: 1;
+            /* Asegura que el texto esté sobre el círculo */
+        }
+
+        .animated-button::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 0;
+            background-color: #e74c3c;
+            border-radius: 50%;
+            transition: width 3s ease, height ease, background-color 0.3s ease;
+            /* Agregado el cambio de color */
+            z-index: -1;
+            /* Poner el círculo detrás del contenido del botón */
+        }
+
+        .animated-button:hover::before {
+            width: 200%;
+            height: 200%;
+            background-color: #e74c3c;
+            /* Nuevo color de fondo al pasar el ratón */
+        }
+    </style>
+</head>
+
+<body>
+    <button class="animated-button">Botón animado</button>
+</body>
+
+</html>
