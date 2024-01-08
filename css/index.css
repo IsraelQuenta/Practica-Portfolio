@@ -37,7 +37,7 @@
   bottom: 0;
   height: 2px;
   background-color: white;
-  animation: line-down 1s both;
+  animation: line-down 800ms both;
 }
 .button-contact {
   box-sizing: border-box;
